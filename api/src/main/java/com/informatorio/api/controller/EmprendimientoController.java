@@ -14,7 +14,7 @@ import com.informatorio.api.entity.Emprendimiento;
 @RequestMapping(value = "/emprendimiento")
 
 public class EmprendimientoController{
-    private  EmprendimientoRepository emprendimientoRepository;
+    private final EmprendimientoRepository emprendimientoRepository;
     
     @Autowired
     public EmprendimientoController(EmprendimientoRepository emprendimientoRepository){
@@ -22,7 +22,7 @@ public class EmprendimientoController{
     }
     @PostMapping
 
-    public ResponseEntity<?> createCarrito(@Validated @RequestBody Emprendimiento emprendimiento) {
+    public ResponseEntity<?> createEmprendimiento(@Validated @RequestBody Emprendimiento emprendimiento) {
         return new ResponseEntity<>(emprendimientoRepository.save(emprendimiento), HttpStatus.CREATED);
     }
 }
