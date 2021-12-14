@@ -6,7 +6,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 
 public interface EmprendimientoRepository extends JpaRepository<Emprendimiento, Long> {
-
-    Object save(EmprendimientoRepository emprendimiento);
     
 }
