@@ -24,7 +24,7 @@ public class VotoController {
     public ResponseEntity<?> crearVoto(@Valid @RequestBody VotoDTO votoDTO) {
         return new ResponseEntity<>(votoService.crearVoto(votoDTO), HttpStatus.CREATED);
     }
-    @GetMapping(value = "/{usuarioId}")
+    @GetMapping(value = "/votos/{usuarioId}")
     public ResponseEntity<?> obtenerLosVotosDeUnUsuario(@PathVariable("usuarioId") Long usuarioId) {
         return new ResponseEntity<>(votoService.obtenerVotos(usuarioId), HttpStatus.OK);
     }
