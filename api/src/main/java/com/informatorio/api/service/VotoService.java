@@ -1,5 +1,4 @@
 package com.informatorio.api.service;
-
 import java.util.List;
 import com.informatorio.api.dto.VotoDTO;
 import com.informatorio.api.entity.Emprendimiento;

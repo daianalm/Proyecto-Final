@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
-@RequestMapping(value = "/usuario")
+@RequestMapping(value = "api/v1/usuarios")
 public class UsuarioController {
     private final UsuarioService usuarioService;
     @Autowired

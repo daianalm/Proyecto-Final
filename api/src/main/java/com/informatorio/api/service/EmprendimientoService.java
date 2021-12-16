@@ -1,5 +1,4 @@
 package com.informatorio.api.service;
-
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.function.Predicate;

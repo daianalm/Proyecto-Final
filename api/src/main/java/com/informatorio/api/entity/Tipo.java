@@ -1,6 +1,6 @@
 package com.informatorio.api.entity;
 
-public enum TipoUsuario {
+public enum Tipo {
     USUARIO,
     COLABORADOR,
     OWNER 

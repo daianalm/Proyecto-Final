@@ -1,4 +1,5 @@
 package com.informatorio.api.entity;
+
 import java.time.LocalDate;
 import java.util.List;
 import javax.persistence.Column;

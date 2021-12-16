@@ -1,5 +1,4 @@
 package com.informatorio.api.dto;
-
 import java.time.LocalDateTime;
 import com.informatorio.api.entity.Generado;
 

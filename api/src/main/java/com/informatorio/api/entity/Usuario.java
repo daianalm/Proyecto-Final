@@ -51,7 +51,7 @@ public class Usuario {
     private String pais;
     @NotNull
     @Enumerated(value = EnumType.STRING)
-    private TipoUsuario tipoUsuario;
+    private Tipo tipo;
     @OneToMany(mappedBy = "creador", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private List<Emprendimiento> emprendimientos = new ArrayList<Emprendimiento>();
@@ -122,11 +122,11 @@ public class Usuario {
     public void setPais(String pais) {
         this.pais = pais;
     }
-    public TipoUsuario getTipo() {
-        return tipoUsuario;
+    public Tipo getTipo() {
+        return tipo;
     }
-    public void setTipo(TipoUsuario tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
     }
 /*     @JsonIgnore */
     public List<Emprendimiento> getEmprendimientos() {
@@ -147,7 +147,7 @@ public class Usuario {
     public String toString() {
         return "Usuario [activo=" + activo + ", apellido=" + apellido + ", ciudad=" + ciudad + ", email=" + email
                 + ", fechaDeCreacion=" + fechaDeCreacion + ", id=" + id + ", nombre=" + nombre + ", pais=" + pais
-                + ", password=" + password + ", provincia=" + provincia + ", tipo=" + tipoUsuario + ", ultimaModificacion="
+                + ", password=" + password + ", provincia=" + provincia + ", tipo=" + tipo + ", ultimaModificacion="
                 + ultimaModificacion + "]";
     }   
 }

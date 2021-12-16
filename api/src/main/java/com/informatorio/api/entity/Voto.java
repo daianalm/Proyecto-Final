@@ -7,8 +7,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.CreationTimestamp;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Voto {

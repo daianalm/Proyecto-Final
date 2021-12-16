@@ -1,5 +1,4 @@
 package com.informatorio.api.controller;
-
 import javax.validation.Valid;
 import com.informatorio.api.dto.VotoDTO;
 import com.informatorio.api.service.VotoService;
@@ -14,14 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/voto")
+@RequestMapping(value = "/votos")
 public class VotoController {
     private final VotoService votoService;
     @Autowired
     public VotoController(VotoService votoService) {
         this.votoService = votoService;
     }
-
     @PostMapping
     public ResponseEntity<?> crearVoto(@Valid @RequestBody VotoDTO votoDTO) {
         return new ResponseEntity<>(votoService.crearVoto(votoDTO), HttpStatus.CREATED);

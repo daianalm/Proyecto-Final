@@ -1,5 +1,4 @@
 package com.informatorio.api.converter;
-
 import java.time.LocalDateTime;
 import com.informatorio.api.dto.VotoDTO;
 import com.informatorio.api.entity.Voto;

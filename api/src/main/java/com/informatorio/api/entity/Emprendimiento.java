@@ -19,7 +19,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Where;
 
+
 @Entity
+
 @Where(clause = "activo = true")
 public class Emprendimiento {
     @Id

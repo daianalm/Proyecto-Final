@@ -1,5 +1,4 @@
 package com.informatorio.api.controller;
-
 import javax.validation.Valid;
 import com.informatorio.api.entity.Evento;
 import com.informatorio.api.service.EventoService;
@@ -15,14 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/evento")
+@RequestMapping(value = "/api/v1/eventos")
 public class EventoController {
     private final EventoService eventoService;
     @Autowired
     public EventoController(EventoService eventoService) {
         this.eventoService = eventoService;
     }
-
     @PostMapping
     public ResponseEntity<?> crearEvento(@Valid @RequestBody Evento evento) {
         return new ResponseEntity<>(eventoService.guardar(evento), HttpStatus.CREATED);
