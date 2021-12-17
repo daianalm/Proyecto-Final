@@ -73,15 +73,6 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://localhost:8080/api/v1/usuarios/2/quitar",
 							"protocol": "http",
@@ -114,7 +105,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\":\"Daiana\",\r\n    \"apellido\":\"Martinez\",\r\n    \"email\":\"dq@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"ciudad\":\"Resistencia\",\r\n    \"provincia\":\"Chaco\",\r\n    \"pais\":\"Argentina\",\r\n    \"tipo\":\"USUARIO\"\r\n}",
+							"raw": "{\r\n    \"nombre\":\"Daiana\",\r\n    \"apellido\":\"Martinez\",\r\n    \"email\":\"dq@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"ciudad\":\"Resistencia\",\r\n    \"provincia\":\"Chaco\",\r\n    \"pais\":\"Argentina\",\r\n    \"tipo\":\"OWNER\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -173,23 +164,11 @@
 				},
 				{
 					"name": "obtener usuarios por ciudad",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/usuarios?ciudad=Resistencia",
+							"raw": "http://localhost:8080/api/v1/usuarios?ciudad=General Jose de San Martin",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -203,7 +182,7 @@
 							"query": [
 								{
 									"key": "ciudad",
-									"value": "Resistencia"
+									"value": "General Jose de San Martin"
 								}
 							]
 						}
@@ -248,6 +227,36 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "crear usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Romina\",\r\n    \"apellido\":\"Martinez\",\r\n    \"email\":\"rr@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"ciudad\":\"General José de San Martin\",\r\n    \"provincia\":\"Chaco\",\r\n    \"pais\":\"Argentina\",\r\n    \"tipo\":\"USUARIO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -282,32 +291,25 @@
 					"response": []
 				},
 				{
-					"name": "obtener todos los emprendimientos",
+					"name": "eliminar emprendimiento",
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/ap1/v1/emprendimientos",
+							"raw": "http://localhost:8080/api/v1/emprendimientos/3/quitar",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"ap1",
+								"api",
 								"v1",
-								"emprendimientos"
+								"emprendimientos",
+								"3",
+								"quitar"
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "eliminar emprendimiento",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": null
 					},
 					"response": []
 				},
@@ -318,7 +320,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\":\"Fusión orgánica\",\r\n    \"contenido\": \"Alimentos que permiten llevar una buena vida saludable\",\r\n    \"descripcion\": \"Alimento Sustentable\",\r\n    \"objetivo\":\"500000\",\r\n    \"url\": \"google/images\",\r\n    \"tags\": [\r\n        {\r\n           \"nombre\": \"Fitness\"\r\n        },\r\n        {\r\n            \"nombre\": \"Saludable\"\r\n        },\r\n        {\r\n            \"nombre\": \"Alimento\"\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"nombre\":\"Fusión orgánica\",\r\n    \"contenido\": \"Alimentos que permiten llevar una buena vida saludable\",\r\n    \"descripcion\": \"Alimento Fit\",\r\n    \"objetivo\":\"500000\",\r\n    \"url\": \"google/images\",\r\n    \"tags\": [\r\n        {\r\n           \"nombre\": \"Fitness\"\r\n        },\r\n        {\r\n            \"nombre\": \"Saludable\"\r\n        },\r\n        {\r\n            \"nombre\": \"Alimento\"\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -362,7 +364,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\":\"Fusión orgánica\",\r\n    \"contenido\": \"Alimentos que permiten llevar una buena vida saludable\",\r\n    \"descripcion\": \"Alimento Sustentable\",\r\n    \"objetivo\":\"500000\",\r\n    \"url\": \"google/images\"\r\n}",
+							"raw": "{\r\n    \"nombre\":\"Hamburguelandia\",\r\n    \"contenido\":\"Alimento rico en calorías\",\r\n    \"descripcion\":\"Hamburguesa\",\r\n    \"objetivo\":\"200000\",\r\n    \"url\":\"google/images\",\r\n    \"tags\":[\r\n        {\r\n            \"nombre\":\"Pan\"\r\n        },\r\n        {\r\n            \"nombre\":\"calórico\"\r\n        },\r\n        {\r\n            \"nombre\":\"Graso\"\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -398,6 +400,15 @@
 				},
 				{
 					"name": "emprendimientos sin publicar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos los emprendimientos",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -495,9 +506,23 @@
 				{
 					"name": "eliminar evento",
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "http://localhost:8080/api/v1/eventos/2/eliminar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"eventos",
+								"2",
+								"eliminar"
+							]
+						}
 					},
 					"response": []
 				},
@@ -518,6 +543,36 @@
 								"v1",
 								"eventos",
 								"actualizar-estado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear evento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Chaco\",\r\n    \"detalles\": \"Evento gastronómico que reune a chefs locales \",\r\n    \"fechaDecierre\": \"2021/12/20\",\r\n    \"fechaFinal\": \"2021/12/30\",\r\n    \"premio\": 5000000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/eventos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"eventos"
 							]
 						}
 					},
@@ -543,13 +598,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/votos",
+							"raw": "http://localhost:8080/api/v1/votos",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"api",
+								"v1",
 								"votos"
 							]
 						}
