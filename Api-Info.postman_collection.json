@@ -388,33 +388,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "modificar emprendimiento",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": null
-					},
-					"response": []
-				},
-				{
-					"name": "emprendimientos sin publicar",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": null
-					},
-					"response": []
-				},
-				{
-					"name": "Obtener todos los emprendimientos",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": null
-					},
-					"response": []
 				}
 			]
 		},
@@ -610,15 +583,6 @@
 								"votos"
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "todos los votos de un usuario",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": null
 					},
 					"response": []
 				}
